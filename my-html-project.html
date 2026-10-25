@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gursha Habesha | Authentic Ethiopian Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ethiopic:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ethio-green: #078C03;
+            --ethio-yellow: #FCDD09;
+            --ethio-red: #EF2125;
+            --ethio-blue: #3369FF;
+            --gold: #D4AF37;
+            --dark-bg: #0d2c1a;
+            --light-bg: #f8f5f0;
+            --text-dark: #2C2C2C;
+            --text-light: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .ethiopic-font {
+            font-family: 'Noto Serif Ethiopic', serif;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Logo */
+        header {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--ethio-green), var(--ethio-yellow), var(--ethio-red), var(--ethio-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+            overflow: hidden;
+        }
+        
+        .logo-inner {
+            width: 80%;
+            height: 80%;
+            background-color: var(--dark-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .logo-symbol {
+            font-family: 'Noto Serif Ethiopic', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--ethio-yellow);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1;
+        }
+        
+        .logo-sub {
+            font-family: 'Noto Serif Ethiopic', serif;
+            font-size: 1.2rem;
+            color: white;
+            margin-top: 5px;
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+
+transition: all 0.3s;
+            padding: 8px 0;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--ethio-yellow);
+        }
+        
+        nav a.active {
+            color: var(--ethio-yellow);
+        }
+        
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--ethio-green), var(--ethio-yellow), var(--ethio-red));
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1585937421612-70ca003675ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 100px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23fcdd09' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero h1 .ethiopic {
+            color: var(--ethio-yellow);
+            font-family: 'Noto Serif Ethiopic', serif;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--ethio-green), var(--ethio-yellow));
+            color: var(--dark-bg);
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(to right, var(--ethio-yellow), var(--ethio-red));
+        }
+        
+        /* Section Styles */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--dark-bg);
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, var(--ethio-green), var(--ethio-yellow), var(--ethio-red));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+
+
+}
+        
+        .section-title .ethiopic {
+            color: var(--ethio-red);
+            font-family: 'Noto Serif Ethiopic', serif;
+        }
+        
+        /* Ancient History Section */
+        .history-section {
+            padding: 100px 0;
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .history-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%23078C03' fill-opacity='0.03' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .history-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .history-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .history-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--ethio-green);
+            margin-bottom: 25px;
+        }
+        
+        .history-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .history-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+        
+        .history-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .history-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .history-image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            font-style: italic;
+        }
+        
+        /* Menu Section */
+        .menu-section {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+            position: relative;
+        }
+        
+        .menu-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 50px;
+        }
+        
+        .menu-tab {
+            background-color: white;
+            border: 2px solid var(--ethio-green);
+            color: var(--ethio-green);
+            padding: 12px 25px;
+            border-radius: 30px;
+
+cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .menu-tab:hover {
+            background-color: var(--ethio-green);
+            color: white;
+        }
+        
+        .menu-tab.active {
+            background-color: var(--ethio-green);
+            color: white;
+        }
+        
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .menu-category {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .menu-category.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .menu-item-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--ethio-red);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .menu-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .menu-content {
+            padding: 25px;
+        }
+        
+        .menu-item-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--dark-bg);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .menu-item-title .ethiopic {
+            font-family: 'Noto Serif Ethiopic', serif;
+            color: var(--ethio-red);
+            font-size: 1.4rem;
+        }
+        
+        .menu-item-price {
+            color: var(--ethio-green);
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+        
+        .menu-item-desc {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .menu-item-ingredients {
+            font-size: 0.9rem;
+            color: #888;
+            font-style: italic;
+        }
+        
+        /* Coffee Section */
+        .coffee-section {
+            padding: 100px 0;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .coffee-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .coffee-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--dark-bg);
+            margin-bottom: 25px;
+        }
+        
+        .coffee-content h3 .ethiopic {
+            color: var(--ethio-red);
+            font-family: 'Noto Serif Ethiopic', serif;
+        }
+        
+        .coffee-steps {
+            margin-top: 30px;
+            display: grid;
+
+gap: 20px;
+        }
+        
+        .coffee-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .step-number {
+            background-color: var(--ethio-green);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--ethio-yellow);
+            margin-bottom: 20px;
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--ethio-yellow);
+            color: var(--dark-bg);
+            transform: translateY(-5px);
+        }
+        
+        .footer-links h3, .footer-contact h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: var(--ethio-yellow);
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--ethio-yellow);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #ddd;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.4rem;
+            }
+            
+            .menu-container, .menu-category.active {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+
+
+background-color: var(--dark-bg);
+                padding: 20px;
+                display: none;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 100px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo-main {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .logo-symbol {
+                font-size: 2.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .menu-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .menu-tab {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-inner">
+                        <div class="logo-symbol">ጉርሻ</div>
+                    </div>
+                </div>
+                <div class="logo-text">
+                    <div class="logo-main">Gursha Habesha </div>
+                    <div class="logo-sub">ጉርሻ ሀበሻ</div>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#history">Ancient History</a></li>
+                    <li><a href="#menu">Cultural Menu</a></li>
+                    <li><a href="#coffee">Coffee Ceremony</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-pattern"></div>
+        <div class="container hero-content">
+            <h1>Welcome to <span class="ethiopic">ጉርሻ ሀበሻ</span></h2>
+            <h2> Restaurant And Coffee House </h1><br>
+            <p>Experience the authentic taste and rich heritage of Ethiopia. Gursha (ጉርሻ) represents the traditional Ethiopian act of feeding others as a gesture of love, respect, and community.</p>
+            <a href="#menu" class="btn">Explore Our Cultural Menu</a>
+        </div>
+    </section>
+
+    <!-- Ancient History Section -->
+    <section id="history" class="history-section">
+        <div class="history-pattern"></div>
+        <div class="container">
+            <h2 class="section-title">Ancient <span class="ethiopic">History</span></h2>
+            <div class="history-container">
+                <div class="history-content">
+                    <h3>The Cradle of Civilization</h3>
+                    <p>Ethiopia is one of the oldest countries in the world and the only African country never to be colonized. Its history spans over 3,000 years, with the Aksumite Kingdom (c. 100-940 AD) being one of the great powers of the ancient world.</p>
+                    <p>The Kingdom of Aksum was a major trading empire with connections reaching as far as India and China. It was one of the first major empires to convert to Christianity in the 4th century AD under King Ezana.</p>
+
+
+<p>Ethiopian cuisine reflects this long history, with injera (fermented flatbread) dating back over 6,000 years. The unique flavors come from berbere (spice mixture) and niter kibbeh (spiced clarified butter), both with ancient origins.</p>
+                    
+                    <h3 style="margin-top: 30px;">The Legend of Queen of Sheba</h3>
+                    <p>According to Ethiopian tradition, the Queen of Sheba (Makeda) traveled from Ethiopia to Jerusalem to visit King Solomon. Their union resulted in a son, Menelik I, who became the first emperor of Ethiopia and brought the Ark of the Covenant to Ethiopia.</p>
+                    <p>This legend forms the basis of Ethiopia's Solomonic dynasty, which ruled until 1974, claiming direct descent from King Solomon and the Queen of Sheba.</p>
+                </div>
+                <div class="history-image">
+                    <img src="D:\gettyimages-1288687805-612x612.jpg" alt="gettyimages">
+                    <div class="history-image-caption">Ethiopian crosses and artifacts dating back centuries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Cultural <span class="ethiopic">Menu</span></h2>
+            
+            <div class="menu-tabs">
+                <div class="menu-tab active" data-category="main">Main Dishes</div>
+                <div class="menu-tab" data-category="vegetarian">Vegetarian</div>
+                <div class="menu-tab" data-category="meat">Meat Dishes</div>
+                <div class="menu-tab" data-category="traditional">Traditional Specialties</div>
+                <div class="menu-tab" data-category="beverages">Beverages</div>
+            </div>
+            
+            <!-- Main Dishes -->
+            <div class="menu-category active" id="main">
+                <div class="menu-item">
+                    <div class="menu-item-badge">Signature</div>
+                    <img src="D:\doro.jpg" alt="doro" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Doro Wat <span class="ethiopic">ዶሮ ወጥ</span></span>
+                            <span class="menu-item-price">800</span>
+                        </div>
+                        <p class="menu-item-desc">Ethiopia's national dish - spicy chicken stew slow-cooked in berbere sauce with hard-boiled eggs.</p>
+                        <p class="menu-item-ingredients">Chicken, berbere, onions, garlic, ginger, niter kibbeh, hard-boiled eggs</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="D:\hat.jpg" alt="hat" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Beef Tibs <span class="ethiopic"> ጥብስ</span></span>
+                            <span class="menu-item-price">700</span>
+                        </div>
+                        <p class="menu-item-desc">Sautéed beef strips with onions, rosemary, and Ethiopian spices, served sizzling hot.</p>
+                        <p class="menu-item-ingredients">Beef, onions, rosemary, jalapeños, garlic, niter kibbeh</p>
+                    </div>
+                </div>
+                
+    
+<img src="D:\jj.jpg" alt="Vegetarian Platter" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Vegetarian Platter <span class="ethiopic">እንጀራ </span></span>
+                            <span class="menu-item-price">500</span>
+                        </div>
+                        <p class="menu-item-desc">A sampler of our finest vegetarian dishes served on a large injera for sharing.</p>
+                        <p class="menu-item-ingredients">Misir wat, kik alicha, gomen, atakilt wat, shiro, tomato salad</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vegetarian -->
+            <div class="menu-category" id="vegetarian">
+                <div class="menu-item">
+                    <div class="menu-item-badge">Popular</div>
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Misir Wat" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Misir Wat <span class="ethiopic">ምስር ወጥ</span></span>
+                            <span class="menu-item-price">$16.99</span>
+                        </div>
+                        <p class="menu-item-desc">Spicy red lentil stew cooked with berbere spices, onions, and garlic.</p>
+                        <p class="menu-item-ingredients">Red lentils, berbere, onions, garlic, ginger, niter kibbeh</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Shiro" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Shiro <span class="ethiopic">ሽሮ</span></span>
+                            <span class="menu-item-price">$15.99</span>
+                        </div>
+                        <p class="menu-item-desc">A thick stew made from ground chickpeas or broad beans, seasoned with spices.</p>
+                        <p class="menu-item-ingredients">Ground chickpeas, berbere, onions, garlic, niter kibbeh</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Meat Dishes -->
+            <div class="menu-category" id="meat">
+                <div class="menu-item">
+                    <div class="menu-item-badge">Traditional</div>
+                    <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kitfo" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Kitfo <span class="ethiopic">ክትፎ</span></span>
+                            <span class="menu-item-price">900</span>
+                        </div>
+                        <p class="menu-item-desc">Traditional Ethiopian steak tartare - minced raw beef seasoned with mitmita and niter kibbeh.</p>
+                        <p class="menu-item-ingredients">Premium beef, mitmita, niter kibbeh, cardamom, garlic</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Traditional Specialties -->
+            <div class="menu-category" id="traditional">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Injera" class="menu-img">
+
+
+<div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Injera <span class="ethiopic">እንጀራ</span></span>
+                            <span class="menu-item-price">300</span>
+                        </div>
+                        <p class="menu-item-desc">Traditional sourdough flatbread made from teff flour, the foundation of Ethiopian meals.</p>
+                        <p class="menu-item-ingredients">Teff flour, water, fermentation starter</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Beverages -->
+            <div class="menu-category" id="beverages">
+                <div class="menu-item">
+                    <div class="menu-item-badge">Traditional</div>
+                    <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ethiopian Coffee" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Traditional Coffee <span class="ethiopic">ቡና</span></span>
+                            <span class="menu-item-price">$8.99</span>
+                        </div>
+                        <p class="menu-item-desc">Freshly roasted and brewed Ethiopian coffee served in the traditional ceremony style.</p>
+                        <p class="menu-item-ingredients">Ethiopian coffee beans, water, optional sugar</p>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tej" class="menu-img">
+                    <div class="menu-content">
+                        <div class="menu-item-title">
+                            <span>Tej <span class="ethiopic">ጠጅ</span></span>
+                            <span class="menu-item-price">99</span>
+                        </div>
+                        <p class="menu-item-desc">Traditional Ethiopian honey wine, slightly sweet with a unique fermentation process.</p>
+                        <p class="menu-item-ingredients">Honey, water, gesho leaves (Ethiopian hops)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Ceremony Section -->
+    <section id="coffee" class="coffee-section">
+        <div class="container">
+            <h2 class="section-title">Coffee <span class="ethiopic">Ceremony</span></h2>
+            <div class="coffee-container">
+                <div class="coffee-content">
+                    <h3>Buna <span class="ethiopic">ቡና</span>: The Ethiopian Coffee Ceremony</h3>
+                    <p>The Ethiopian coffee ceremony is an integral part of Ethiopian social and cultural life. It's an elaborate ritual that can take several hours, emphasizing community, respect, and hospitality.</p>
+                    <p>Ethiopia is the birthplace of coffee (Coffea arabica), and the ceremony honors this legacy. The word "coffee" comes from the Ethiopian region of Kaffa.</p>
+                    
+                    <div class="coffee-steps">
+                        <div class="coffee-step">
+                            <div class="step-number">1</div>
+                            <div>
+                                <strong>Roasting:</strong> Green coffee beans are washed and roasted in a pan over hot coals.
+                            </div>
+                        </div>
+                        <div class="coffee-step">
+                            <div class="step-number">2</div>
+                            <div>
+                                <strong>Grinding:</strong> The roasted beans are ground using a mortar and pestle.
+
+
+</div>
+                        </div>
+                        <div class="coffee-step">
+                            <div class="step-number">3</div>
+                            <div>
+                                <strong>Brewing:</strong> Ground coffee is added to a traditional clay pot called a jebena with water.
+                            </div>
+                        </div>
+                        <div class="coffee-step">
+                            <div class="step-number">4</div>
+                            <div>
+                                <strong>Serving:</strong> Coffee is served in small cups with plenty of sugar, often accompanied by popcorn or incense.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 20px;">At Gursha Habesha, we perform the traditional coffee ceremony daily at 4 PM. Join us to experience this authentic cultural tradition.</p>
+                </div>
+                <div class="history-image">
+                    <img src="D:\gettyimages-1156763350-612x612.jpg" alt="gettyimages">
+                    <div class="history-image-caption">Traditional Ethiopian coffee ceremony with jebena and cups</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Gursha Habesha</div>
+                    <p>Experience authentic Ethiopian cuisine and traditions. Gursha represents the Ethiopian custom of feeding others as an expression of love and community.</p>
+                    <p>Our restaurant honors Ethiopia's rich history, from ancient Aksum to modern Addis Ababa, through food, coffee, and hospitality.</p>
+                    
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Cultural Menu</h3>
+                    <ul>
+                        <li><a href="#menu"><i class="fas fa-utensils"></i> Main Dishes</a></li>
+                        <li><a href="#menu"><i class="fas fa-leaf"></i> Vegetarian Platters</a></li>
+                        <li><a href="#menu"><i class="fas fa-drumstick-bite"></i> Meat Specialties</a></li>
+                        <li><a href="#menu"><i class="fas fa-mug-hot"></i> Traditional Beverages</a></li>
+                        <li><a href="#coffee"><i class="fas fa-coffee"></i> Coffee Ceremony</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Visit Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Adwa Victory Street, Addis Ababa, Ethiopia</p>
+                    <p><i class="fas fa-phone"></i> +251 11 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@gurshahabesha.com</p>
+                    <p><i class="fas fa-clock"></i> Open Daily: 11:00 AM - 11:00 PM</p>
+                    <p><i class="fas fa-coffee"></i> Coffee Ceremony: Daily at 4:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Gursha Habesha Restaurant. All rights reserved. | ኢትዮጵያ ዘለዓለም ትኑን - Ethiopia Forever Prosperous</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('show');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('show')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Menu tabs functionality
+        const menuTabs = document.querySelectorAll('.menu-tab');
+        const menuCategories = document.querySelectorAll('.menu-category');
+        
+        menuTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                
+                // Update active tab
+                menuTabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show selected category
+                menuCategories.forEach(cat => {
+                    cat.classList.remove('active');
+                    if (cat.id === category) {
+                        cat.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('show')) {
+                        navMenu.classList.remove('show');
+                        const icon = mobileMenuBtn.querySelector('i');
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= sectionTop - 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === #${currentSection}) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Initialize first category as active
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstCategory = document.querySelector('.menu-category');
+            if (firstCategory) firstCategory.classList.add('active');
+        });
+    </script>
+</body>
+</html>
